@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HappyFarm</title>
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="shortcut icon" href="orange.ico"/>
+	<script type="text/javascript"  src="./js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript"  src="js/HFJS.js"></script>
+	<script src="./js/jquery.min.js"></script>
+ 	<script src="./js/jquery-ui.min.js"></script>	
+</head>
+<body>
+	<div class="countainer">
+		<img src="img/title2.png" height="67" width="156" alt="" style="margin:0 280px;">
+		<!-- <h1>开心农场</h1> -->
+		<div class="countain">
+			<div class="weather">
+				<p>晴 25℃</p>
+			</div>
+			<div class="nav">
+				<ul class="navlist">
+					<li class="shop">
+						<img src="img/shop.png" height="50" width="50" alt="">
+						<p>商店</p></li>
+					<li class="barn">
+						<img src="img/warehouse.png" height="50" width="50" alt="">
+						<p>仓库</p></li>
+					<li class="bag">
+						<img src="img/pack.png" height="50" width="50" alt="">
+						<p>背包</p></li>
+					<li class="setting">
+						<img src="img/set.png" height="50" width="50" alt=""><p>设置</p></li>
+				</ul>
+				<div class="bags">
+					<img class="close" src="img/close.png" height="33" width="33" alt="">
+					<ul class="bagIn">
+						<li><img class="seeds" id="seedsApple" src="img/apple.png" height="50" width="47" alt=""><p id="seedApple">0</p></li>
+						<li><img class="seeds" src="img/lemon.png" height="50" width="64" alt=""><p id="seedLemon">0</p></li>
+						<li><img class="seeds" src="img/orange.png" height="50" width="58" alt=""><p id="seedOrange">0</p></li>
+						<li><img class="seeds" src="img/watermelon.png" height="51" width="53" alt=""><p id="seedWatm">0</p></li>
+						<li><img class="seeds" src="img/cherry.png" height="50" width="58" alt=""><p id="seedCherry">0</p></li>
+						<li><img class="seeds" src="img/banana.png" height="50" width="64" alt=""><p id="seedBanana">0</p></li>	
+					</ul>
+				</div>
+			</div>
+			<div class="shops" id="shops">
+				<img class="close" src="img/close.png" height="33" width="33" alt="">
+				<div class="money">
+					<p>剩余金钱：</p><p id="money">1000</p>
+				</div>
+				<p>点击购买</p>
+				<ul class="shopIn">
+					<li class="seed" id="buyApple">
+						<img src="img/apple.png" height="50" width="47" alt="">
+						<p>24</p>
+					</li>
+					<li class="seed" id="buyLemon">
+						<img src="img/lemon.png" height="50" width="64" alt="">
+						<p>45</p>
+					</li>
+					<li class="seed" id="buyOrange">
+						<img src="img/orange.png" height="50" width="58" alt="">
+						<p>34</p>
+					</li>
+					<li class="seed" id="buyWatm">
+						<img src="img/watermelon.png" height="50" width="53" alt="">
+						<p>12</p>
+					</li>
+					<li class="seed" id="buyCherry">
+						<img src="img/cherry.png" height="50" width="58" alt="">
+						<p>16</p>
+					</li>
+					<li class="seed" id="buyBanana">
+						<img src="img/banana.png" height="50" width="64" alt="">
+						<p>65</p>
+					</li>
+				</ul>
+				<div class="assure" id="assure">
+					<img class="close2" src="img/close.png" height="33" width="33" alt="">
+					<form action="" method="post">
+						数量：<p id="reduce">-</p>
+						<input type="text" name="salenum" id="salenum" value="0">
+						<p id="increase">+</p>
+					</form>
+					<div class="sure">
+					<p id="sureBuy">确定</p>
+					<p id="cancel">取消</p></div>
+					<!-- <marquee behavior="" direction=""></marquee> -->
+				</div>
+			</div>
+			<div class="barns shops">
+				<img class="close" src="img/close.png" height="33" width="33" alt="">
+				<div class="money">
+					<p>剩余金钱：</p><p id="money">1000</p>
+				</div>
+				<p>点击售卖</p>
+				<ul class="barnIn shopIn">
+					<li class="seed">
+						<img src="img/apple.png" height="50" width="47" alt="">
+						<p>24</p>
+						<p id="numApple">0</p>
+					</li>
+					<li class="seed">
+						<img src="img/lemon.png" height="50" width="64" alt="">
+						<p>45</p>
+						<p id="num">0</p>
+					</li>
+					<li class="seed">
+						<img src="img/orange.png" height="50" width="58" alt="">
+						<p>34</p>
+						<p id="num">0</p>
+					</li>
+					<li class="seed">
+						<img src="img/watermelon.png" height="50" width="53" alt="">
+						<p>12</p>
+						<p id="num">0</p>
+					</li>
+					<li class="seed">
+						<img src="img/cherry.png" height="50" width="58" alt="">
+						<p>16</p>
+						<p id="num">0</p>
+					</li>
+					<li class="seed">
+						<img src="img/banana.png" height="50" width="64" alt="">
+						<p>65</p>
+						<p id="num">0</p>
+					</li>
+				</ul>
+				<div class="assure" id="assure">
+					<img class="close2" src="img/close.png" height="33" width="33" alt="">
+					<form action="" method="post">
+						数量：<p id="reduce">-</p>
+						<input type="text" name="salenum" id="salenum" value="0">
+						<p id="increase">+</p>
+					</form>
+					<div class="sure">
+					<p id="sureSale">确定</p>
+					<p id="cancel">取消</p></div>
+					<!-- <marquee behavior="" direction=""></marquee> -->
+				</div>
+			</div>
+			<div class="assure" id="sets">
+				<img class="close2" src="img/close.png" height="33" width="33" alt="">
+				<ul class="back">
+					<li><img class="back1" src="img/backspring.jpg" height="51.7" width="69.0" alt=""></li>
+					<li><img class="back2" src="img/backwinter.jpg" height="51.7" width="69.0" alt=""></li>
+				</ul>
+			</div>
+
+			<div class="land">
+				<ul class="soils">
+					<li class="soil"></li>
+					<li class="soil"></li>
+					<li class="soil"></li>
+					<li class="soil"></li>
+					<li class="soil"></li>
+					<li class="soil"></li>
+					<li class="soil"></li>
+					<li class="soil"></li>
+					<li class="soil"></li>
+					<li class="soil"></li>
+					<li class="soil"></li>
+					<li class="soil"></li>
+				</ul>
+			</div>
+			<div class="owner">男男的农场</div>
+			<div class="tools">
+				<ul class="tool">
+					<li><img class="gain" src="img/gain.png" height="50" width="46" alt="收获">
+						
+					</li>
+					<li><img class="water" src="img/water.png" height="50" width="68" alt="浇水">
+						<p></p>
+					</li>
+					<li><img class="weed" src="img/weed.png" height="50" width="52" alt="除草">
+						<p></p>
+					</li>
+					<li><img class="poison" src="img/poison.png" height="50" width="31" alt="除虫">
+						<p></p>
+					</li>
+					<li><img class="shovel" src="img/shovel.png" height="50" width="40" alt="铲子">
+						<p></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
